@@ -18,10 +18,11 @@ export class AppHome {
         </p>
 
         <stencil-route-link url='/profile/junaid-farooqui'>
-          <button>
-            Profile page
-          </button>
+          <button>Profile page</button>
         </stencil-route-link>
+          <stencil-route-link url='/saved'><button>My Books</button></stencil-route-link>
+          <search-box></search-box>
+          <books-list></books-list>
       </div>
     );
   }

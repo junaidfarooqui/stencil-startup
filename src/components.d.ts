@@ -7,8 +7,7 @@
 
 import '@stencil/core';
 
-import '@stencil/router';
-import '@stencil/state-tunnel';
+
 import {
   MatchResults,
 } from '@stencil/router';
@@ -29,6 +28,9 @@ export namespace Components {
   interface AppRoot {}
   interface AppRootAttributes extends StencilHTMLAttributes {}
 
+  interface SearchBox {}
+  interface SearchBoxAttributes extends StencilHTMLAttributes {}
+
   interface UserInformation {
     'match': MatchResults;
   }
@@ -42,6 +44,7 @@ declare global {
     'AppHome': Components.AppHome;
     'AppProfile': Components.AppProfile;
     'AppRoot': Components.AppRoot;
+    'SearchBox': Components.SearchBox;
     'UserInformation': Components.UserInformation;
   }
 
@@ -49,6 +52,7 @@ declare global {
     'app-home': Components.AppHomeAttributes;
     'app-profile': Components.AppProfileAttributes;
     'app-root': Components.AppRootAttributes;
+    'search-box': Components.SearchBoxAttributes;
     'user-information': Components.UserInformationAttributes;
   }
 
@@ -71,6 +75,12 @@ declare global {
     new (): HTMLAppRootElement;
   };
 
+  interface HTMLSearchBoxElement extends Components.SearchBox, HTMLStencilElement {}
+  var HTMLSearchBoxElement: {
+    prototype: HTMLSearchBoxElement;
+    new (): HTMLSearchBoxElement;
+  };
+
   interface HTMLUserInformationElement extends Components.UserInformation, HTMLStencilElement {}
   var HTMLUserInformationElement: {
     prototype: HTMLUserInformationElement;
@@ -81,6 +91,7 @@ declare global {
     'app-home': HTMLAppHomeElement
     'app-profile': HTMLAppProfileElement
     'app-root': HTMLAppRootElement
+    'search-box': HTMLSearchBoxElement
     'user-information': HTMLUserInformationElement
   }
 
@@ -88,6 +99,7 @@ declare global {
     'app-home': HTMLAppHomeElement;
     'app-profile': HTMLAppProfileElement;
     'app-root': HTMLAppRootElement;
+    'search-box': HTMLSearchBoxElement;
     'user-information': HTMLUserInformationElement;
   }
 
