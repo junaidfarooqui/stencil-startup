@@ -29,6 +29,13 @@ export namespace Components {
   interface AppRoot {}
   interface AppRootAttributes extends StencilHTMLAttributes {}
 
+  interface BooksList {
+    'books': Array<any>;
+  }
+  interface BooksListAttributes extends StencilHTMLAttributes {
+    'books'?: Array<any>;
+  }
+
   interface SearchBox {}
   interface SearchBoxAttributes extends StencilHTMLAttributes {}
 
@@ -45,6 +52,7 @@ declare global {
     'AppHome': Components.AppHome;
     'AppProfile': Components.AppProfile;
     'AppRoot': Components.AppRoot;
+    'BooksList': Components.BooksList;
     'SearchBox': Components.SearchBox;
     'UserInformation': Components.UserInformation;
   }
@@ -53,6 +61,7 @@ declare global {
     'app-home': Components.AppHomeAttributes;
     'app-profile': Components.AppProfileAttributes;
     'app-root': Components.AppRootAttributes;
+    'books-list': Components.BooksListAttributes;
     'search-box': Components.SearchBoxAttributes;
     'user-information': Components.UserInformationAttributes;
   }
@@ -76,6 +85,12 @@ declare global {
     new (): HTMLAppRootElement;
   };
 
+  interface HTMLBooksListElement extends Components.BooksList, HTMLStencilElement {}
+  var HTMLBooksListElement: {
+    prototype: HTMLBooksListElement;
+    new (): HTMLBooksListElement;
+  };
+
   interface HTMLSearchBoxElement extends Components.SearchBox, HTMLStencilElement {}
   var HTMLSearchBoxElement: {
     prototype: HTMLSearchBoxElement;
@@ -92,6 +107,7 @@ declare global {
     'app-home': HTMLAppHomeElement
     'app-profile': HTMLAppProfileElement
     'app-root': HTMLAppRootElement
+    'books-list': HTMLBooksListElement
     'search-box': HTMLSearchBoxElement
     'user-information': HTMLUserInformationElement
   }
@@ -100,6 +116,7 @@ declare global {
     'app-home': HTMLAppHomeElement;
     'app-profile': HTMLAppProfileElement;
     'app-root': HTMLAppRootElement;
+    'books-list': HTMLBooksListElement;
     'search-box': HTMLSearchBoxElement;
     'user-information': HTMLUserInformationElement;
   }
