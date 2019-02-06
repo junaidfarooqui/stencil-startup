@@ -7,7 +7,7 @@
 
 import '@stencil/core';
 
-
+import '@stencil/redux';
 import {
   MatchResults,
 } from '@stencil/router';

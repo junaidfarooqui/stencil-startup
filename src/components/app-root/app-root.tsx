@@ -1,4 +1,7 @@
-import { Component } from '@stencil/core';
+import '@stencil/router';
+import { Component, Prop } from '@stencil/core';
+import { Store } from '@stencil/redux'
+import { configureStore } from '../../store/index'
 
 
 @Component({
@@ -7,6 +10,11 @@ import { Component } from '@stencil/core';
   shadow: true
 })
 export class AppRoot {
+  @Prop({ context: 'store' }) store: Store
+
+  componentWillLoad() {
+    this.store.setStore(configureStore({}))
+  }
 
   render() {
     return (
