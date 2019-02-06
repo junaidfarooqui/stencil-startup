@@ -19,7 +19,20 @@ function books(state = booksState, action) {
         case actions.SET_REQUEST_ERROR:
             return {
                 ...state,
-                fetchError:
+                fetchError: error,
+                isFetching: false
             }
+        case actions.SET_BOOKS:
+            return {
+                ...state,
+                items,
+                fetchError: null,
+                isFetching: false
+            }
+        default:
+            return state
     }
 }
+const rootReducer = combineReducers({ books });
+
+export default rootReducer
