@@ -9,10 +9,10 @@ const setBooks = (items) => ({ type: SET_BOOKS, items });
 
 export function searchBooks(query) {
     return dispatch => {
-        dispatch(startSearch())
+        dispatch(startSearch());
 
         const serializedQuery = query.split(' ').join('+');
-        const url = 'https://www.googleapis.com/books/v1/volumes?q=${serializedQuery}&maxResults=40';
+        const url = `https://www.googleapis.com/books/v1/volumes?q=${serializedQuery}&maxResults=40`;
 
         fetch(url)
             .then(
@@ -27,4 +27,14 @@ export function searchBooks(query) {
                 }
             })
     }
+}
+
+export const SAVE_BOOK = 'SAVE_BOOK'
+export const saveBook = (book) => {
+    return dispatch => dispatch({ type: SAVE_BOOK, book })
+}
+
+export const REMOVE_BOOK = 'REMOVE_BOOK'
+export const removeBook = (book) => {
+    return dispatch => dispatch({ type: REMOVE_BOOK, book })
 }

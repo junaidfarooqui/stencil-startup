@@ -7,6 +7,8 @@
 
 import '@stencil/core';
 
+import '@stencil/router';
+import '@stencil/state-tunnel';
 import '@stencil/redux';
 import {
   MatchResults,
@@ -35,6 +37,9 @@ export namespace Components {
     'books'?: Array<any>;
   }
 
+  interface SavedBooks {}
+  interface SavedBooksAttributes extends StencilHTMLAttributes {}
+
   interface SearchBox {}
   interface SearchBoxAttributes extends StencilHTMLAttributes {}
 
@@ -52,6 +57,7 @@ declare global {
     'AppProfile': Components.AppProfile;
     'AppRoot': Components.AppRoot;
     'BooksList': Components.BooksList;
+    'SavedBooks': Components.SavedBooks;
     'SearchBox': Components.SearchBox;
     'UserInformation': Components.UserInformation;
   }
@@ -61,6 +67,7 @@ declare global {
     'app-profile': Components.AppProfileAttributes;
     'app-root': Components.AppRootAttributes;
     'books-list': Components.BooksListAttributes;
+    'saved-books': Components.SavedBooksAttributes;
     'search-box': Components.SearchBoxAttributes;
     'user-information': Components.UserInformationAttributes;
   }
@@ -90,6 +97,12 @@ declare global {
     new (): HTMLBooksListElement;
   };
 
+  interface HTMLSavedBooksElement extends Components.SavedBooks, HTMLStencilElement {}
+  var HTMLSavedBooksElement: {
+    prototype: HTMLSavedBooksElement;
+    new (): HTMLSavedBooksElement;
+  };
+
   interface HTMLSearchBoxElement extends Components.SearchBox, HTMLStencilElement {}
   var HTMLSearchBoxElement: {
     prototype: HTMLSearchBoxElement;
@@ -107,6 +120,7 @@ declare global {
     'app-profile': HTMLAppProfileElement
     'app-root': HTMLAppRootElement
     'books-list': HTMLBooksListElement
+    'saved-books': HTMLSavedBooksElement
     'search-box': HTMLSearchBoxElement
     'user-information': HTMLUserInformationElement
   }
@@ -116,6 +130,7 @@ declare global {
     'app-profile': HTMLAppProfileElement;
     'app-root': HTMLAppRootElement;
     'books-list': HTMLBooksListElement;
+    'saved-books': HTMLSavedBooksElement;
     'search-box': HTMLSearchBoxElement;
     'user-information': HTMLUserInformationElement;
   }

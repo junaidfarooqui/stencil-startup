@@ -10,10 +10,22 @@ import { configureStore } from '../../store/index'
   shadow: true
 })
 export class AppRoot {
-  @Prop({ context: 'store' }) store: Store
+  @Prop({ context: 'store' }) store: Store;
+  @Prop({ context: 'isServer' }) private isServer: boolean;
 
-  componentWillLoad() {
-    this.store.setStore(configureStore({}))
+
+    componentWillLoad() {
+        let preloadedState = {}
+
+        if (!this.isServer) {
+            preloadedState = {
+                books: {
+                    items: JSON.parse(localStorage.getItem('items') || '[]'),
+                    savedItems: JSON.parse(localStorage.getItem('savedItems') || '[]')
+                }
+            }
+        }
+        this.store.setStore(configureStore(preloadedState))
   }
 
   render() {
