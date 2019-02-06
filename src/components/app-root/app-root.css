@@ -13,3 +13,14 @@ h1 {
   color: #fff;
   padding: 0 12px;
 }
+input {
+  padding: 0.5rem 1rem;
+}
+button {
+  background: #5851ff;
+  font-size: 1rem;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  border: 0;
+}

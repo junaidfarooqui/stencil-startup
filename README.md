@@ -3,6 +3,10 @@
 This repo is created for training purpose and every comment is related to something learning or experimenting.
 
 
+### Components:
+* User Information
+* Book List (Google API)
+
 ## Getting Started
 
 To start a new project using Stencil, clone this repo to a new directory:
