@@ -1,4 +1,6 @@
-import {Component, State} from "@stencil/core";
+import {Component, Prop, State} from "@stencil/core";
+import { Store, Action } from "@stencil/redux";
+import { searchBooks } from "../../store/actions";
 
 @Component({
     tag: 'search-box',
@@ -6,7 +8,18 @@ import {Component, State} from "@stencil/core";
 })
 
 export class SearchBox {
-    @State() value: string = ''
+    @Prop({ context: 'store' }) store: Store;
+    @State() value: string = '';
+
+    searchBooks: Action;
+
+    componentWillLoad () {
+        const { mapDispatchToProps } = this.store;
+
+        mapDispatchToProps(this, {
+            searchBooks
+        })
+    }
 
     render() {
         return (
