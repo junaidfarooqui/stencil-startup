@@ -30,6 +30,9 @@ export namespace Components {
   interface AppRoot {}
   interface AppRootAttributes extends StencilHTMLAttributes {}
 
+  interface BookModel {}
+  interface BookModelAttributes extends StencilHTMLAttributes {}
+
   interface BooksList {
     'books': Array<any>;
   }
@@ -56,6 +59,7 @@ declare global {
     'AppHome': Components.AppHome;
     'AppProfile': Components.AppProfile;
     'AppRoot': Components.AppRoot;
+    'BookModel': Components.BookModel;
     'BooksList': Components.BooksList;
     'SavedBooks': Components.SavedBooks;
     'SearchBox': Components.SearchBox;
@@ -66,6 +70,7 @@ declare global {
     'app-home': Components.AppHomeAttributes;
     'app-profile': Components.AppProfileAttributes;
     'app-root': Components.AppRootAttributes;
+    'book-model': Components.BookModelAttributes;
     'books-list': Components.BooksListAttributes;
     'saved-books': Components.SavedBooksAttributes;
     'search-box': Components.SearchBoxAttributes;
@@ -89,6 +94,12 @@ declare global {
   var HTMLAppRootElement: {
     prototype: HTMLAppRootElement;
     new (): HTMLAppRootElement;
+  };
+
+  interface HTMLBookModelElement extends Components.BookModel, HTMLStencilElement {}
+  var HTMLBookModelElement: {
+    prototype: HTMLBookModelElement;
+    new (): HTMLBookModelElement;
   };
 
   interface HTMLBooksListElement extends Components.BooksList, HTMLStencilElement {}
@@ -119,6 +130,7 @@ declare global {
     'app-home': HTMLAppHomeElement
     'app-profile': HTMLAppProfileElement
     'app-root': HTMLAppRootElement
+    'book-model': HTMLBookModelElement
     'books-list': HTMLBooksListElement
     'saved-books': HTMLSavedBooksElement
     'search-box': HTMLSearchBoxElement
@@ -129,6 +141,7 @@ declare global {
     'app-home': HTMLAppHomeElement;
     'app-profile': HTMLAppProfileElement;
     'app-root': HTMLAppRootElement;
+    'book-model': HTMLBookModelElement;
     'books-list': HTMLBooksListElement;
     'saved-books': HTMLSavedBooksElement;
     'search-box': HTMLSearchBoxElement;

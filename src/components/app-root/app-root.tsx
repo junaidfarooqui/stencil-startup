@@ -3,7 +3,6 @@ import { Component, Prop } from '@stencil/core';
 import { Store } from '@stencil/redux'
 import { configureStore } from '../../store/index'
 
-
 @Component({
   tag: 'app-root',
   styleUrl: 'app-root.css',
@@ -33,15 +32,16 @@ export class AppRoot {
       <div>
         <header>
           <h1>Stencil App Starter</h1>
+            <div class="col col-12">Check out</div>
         </header>
-
         <main>
           <stencil-router>
             <stencil-route-switch scrollTopOffset={0}>
               <stencil-route url='/' component='app-home' exact={true} />
-              <stencil-route url='/' component='saved-books' exact={true} />
+              <stencil-route url='/saved' component='saved-books' />
               <stencil-route url='/profile/:name' component='app-profile' />
               <stencil-route url='/view/:name' component='user-information' />
+              <stencil-route url='/library/' component='book-model' />
             </stencil-route-switch>
           </stencil-router>
         </main>
