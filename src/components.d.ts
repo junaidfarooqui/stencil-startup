@@ -7,9 +7,9 @@
 
 import '@stencil/core';
 
+import '@stencil/redux';
 import '@stencil/router';
 import '@stencil/state-tunnel';
-import '@stencil/redux';
 import {
   MatchResults,
 } from '@stencil/router';
