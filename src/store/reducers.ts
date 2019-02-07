@@ -2,13 +2,14 @@ import { combineReducers } from "redux";
 import * as actions from './actions'
 
 const booksState = {
-    item: [],
+    items: [],
+    savedItems: [],
     isFetching: false,
     fetchError: ''
 }
 
 function books(state = booksState, action) {
-    const { type, items, error } = action
+    const { type, items, error, book } = action
 
     switch (type) {
         case actions.START_SEARCH:
@@ -29,10 +30,21 @@ function books(state = booksState, action) {
                 fetchError: null,
                 isFetching: false
             }
+        case actions.SAVE_BOOK:
+            return {
+                ...state,
+                savedItems: [...state.savedItems, book]
+            }
+        case actions.REMOVE_BOOK:
+            return {
+                ...state,
+                savedItems: state.savedItems.filter(item => item.id !== book.id)
+            }
         default:
             return state
     }
 }
+
 const rootReducer = combineReducers({ books });
 
 export default rootReducer
