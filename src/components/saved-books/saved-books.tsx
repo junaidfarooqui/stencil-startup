@@ -32,6 +32,8 @@ export class SavedBooks {
 
     return (
       <div class={empty ? 'empty' : ''}>
+        <p></p>
+        <stencil-route-link url='/library/'><button>Back to Book Shop</button></stencil-route-link>
         {empty ? <div>You didn't save any book yet...</div> : null}
         <books-list></books-list>
       </div>
