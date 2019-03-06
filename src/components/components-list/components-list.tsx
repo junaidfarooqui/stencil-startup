@@ -10,8 +10,8 @@ export class ComponentsList {
     render () {
         return (
             <div class="container">
-                <p>Components build on stencils Js</p>
-                <div class="col-4">
+                <h4>Components build on stencils Js</h4>
+                <div class="col-4 mt-4">
                     <h4>Calender:</h4>
                     <calendar-input></calendar-input>
                 </div>

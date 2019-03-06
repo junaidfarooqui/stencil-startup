@@ -6,14 +6,14 @@ import { Component } from '@stencil/core';
 export class AppHome {
   render() {
     return (
-      <div class='app-home'>
+        <div class="container">
           <p>
               Welcome stencil Training section.
           </p>
 
-          <stencil-route-link url='/profile/junaid-farooqui'><button>Profile page</button></stencil-route-link>
-          <stencil-route-link url='/library/'><button>Book Shop</button></stencil-route-link>
-          <stencil-route-link url='/components/'><button>Components List</button></stencil-route-link>
+          <stencil-route-link class="btn btn-primary mr-2" url='/profile/junaid-farooqui'>Profile page</stencil-route-link>
+          <stencil-route-link class="btn btn-primary mr-2" url='/library/'>Book Shop</stencil-route-link>
+          <stencil-route-link class="btn btn-primary mr-2" url='/components/'>Components List</stencil-route-link>
       </div>
     );
   }

@@ -29,8 +29,8 @@ export class AppRoot {
   render() {
     return (
       <div>
-        <header>
-          <h1>Stencil App Starter</h1>
+        <header class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+          <h1 class="navbar-brand">Stencil App Starter</h1>
         </header>
         <main>
           <stencil-router>
