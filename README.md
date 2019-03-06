@@ -6,6 +6,7 @@ This repo is created for training purpose and every comment is related to someth
 ### Components:
 * User Information
 * Book List (Google API)
+* Calendar StencilJs
 
 ## Getting Started
 
@@ -44,5 +45,6 @@ npm run test.watch
 | --- | --- |
 | 0.0.1 | Online book shop component |
 | 0.0.2 | User Information 
+| 0.0.3 | Calendar 
 
 
