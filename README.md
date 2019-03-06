@@ -38,3 +38,11 @@ To run the unit tests and watch for file changes during development, run:
 ```
 npm run test.watch
 ```
+**Version:**
+
+| Version no | Description |
+| --- | --- |
+| 0.0.1 | Online book shop component |
+| 0.0.2 | User Information 
+
+
