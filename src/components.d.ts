@@ -40,6 +40,12 @@ export namespace Components {
     'books'?: Array<any>;
   }
 
+  interface CalendarInput {}
+  interface CalendarInputAttributes extends StencilHTMLAttributes {}
+
+  interface ComponentsList {}
+  interface ComponentsListAttributes extends StencilHTMLAttributes {}
+
   interface SavedBooks {}
   interface SavedBooksAttributes extends StencilHTMLAttributes {}
 
@@ -61,6 +67,8 @@ declare global {
     'AppRoot': Components.AppRoot;
     'BookModel': Components.BookModel;
     'BooksList': Components.BooksList;
+    'CalendarInput': Components.CalendarInput;
+    'ComponentsList': Components.ComponentsList;
     'SavedBooks': Components.SavedBooks;
     'SearchBox': Components.SearchBox;
     'UserInformation': Components.UserInformation;
@@ -72,6 +80,8 @@ declare global {
     'app-root': Components.AppRootAttributes;
     'book-model': Components.BookModelAttributes;
     'books-list': Components.BooksListAttributes;
+    'calendar-input': Components.CalendarInputAttributes;
+    'components-list': Components.ComponentsListAttributes;
     'saved-books': Components.SavedBooksAttributes;
     'search-box': Components.SearchBoxAttributes;
     'user-information': Components.UserInformationAttributes;
@@ -108,6 +118,18 @@ declare global {
     new (): HTMLBooksListElement;
   };
 
+  interface HTMLCalendarInputElement extends Components.CalendarInput, HTMLStencilElement {}
+  var HTMLCalendarInputElement: {
+    prototype: HTMLCalendarInputElement;
+    new (): HTMLCalendarInputElement;
+  };
+
+  interface HTMLComponentsListElement extends Components.ComponentsList, HTMLStencilElement {}
+  var HTMLComponentsListElement: {
+    prototype: HTMLComponentsListElement;
+    new (): HTMLComponentsListElement;
+  };
+
   interface HTMLSavedBooksElement extends Components.SavedBooks, HTMLStencilElement {}
   var HTMLSavedBooksElement: {
     prototype: HTMLSavedBooksElement;
@@ -132,6 +154,8 @@ declare global {
     'app-root': HTMLAppRootElement
     'book-model': HTMLBookModelElement
     'books-list': HTMLBooksListElement
+    'calendar-input': HTMLCalendarInputElement
+    'components-list': HTMLComponentsListElement
     'saved-books': HTMLSavedBooksElement
     'search-box': HTMLSearchBoxElement
     'user-information': HTMLUserInformationElement
@@ -143,6 +167,8 @@ declare global {
     'app-root': HTMLAppRootElement;
     'book-model': HTMLBookModelElement;
     'books-list': HTMLBooksListElement;
+    'calendar-input': HTMLCalendarInputElement;
+    'components-list': HTMLComponentsListElement;
     'saved-books': HTMLSavedBooksElement;
     'search-box': HTMLSearchBoxElement;
     'user-information': HTMLUserInformationElement;

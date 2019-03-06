@@ -6,7 +6,6 @@ import { configureStore } from '../../store/index'
 @Component({
   tag: 'app-root',
   styleUrl: 'app-root.css',
-  shadow: true
 })
 export class AppRoot {
   @Prop({ context: 'store' }) store: Store;
@@ -32,7 +31,6 @@ export class AppRoot {
       <div>
         <header>
           <h1>Stencil App Starter</h1>
-            <div class="col col-12">Check out</div>
         </header>
         <main>
           <stencil-router>
@@ -42,6 +40,7 @@ export class AppRoot {
               <stencil-route url='/profile/:name' component='app-profile' />
               <stencil-route url='/view/:name' component='user-information' />
               <stencil-route url='/library/' component='book-model' />
+              <stencil-route url='/components/' component='components-list' />
             </stencil-route-switch>
           </stencil-router>
         </main>
