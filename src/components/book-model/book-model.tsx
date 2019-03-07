@@ -28,7 +28,7 @@ export class BookModel {
 
     render() {
         return (
-            <div class='book-model'>
+            <div class="container">
                 <p>
                     Welcome to Book Section, you can find all books here. Please type book name which you looking for.
                 </p>
