@@ -46,5 +46,3 @@ npm run test.watch
 | 0.0.1 | Online book shop component |
 | 0.0.2 | User Information 
 | 0.0.3 | Calendar 
-
-
